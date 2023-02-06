@@ -1,0 +1,26 @@
+class Movie {
+    constructor(title='', studio='', rating='PG') {
+this.title= title;
+this.studio= studio;
+this.rating= rating;
+    }
+    getPG(movies=[].rating=''){
+        return movies.filter((m)=>m.rating === rating);
+}
+}
+
+const CasionRoyaleMovie=new Movie('Casino Royale','Eon Production','PG13');
+const Avengers=new Movie('Avengers','Marvel','PG13');
+const Varisu=new Movie('Varisu','Seven Screen','PG13');
+const Thunivu=new Movie('Thunivu','Shri Balaji Photos','PG13');
+const Avatar=new Movie('Avatar','eros','PG13');
+const Thiruchitrambalam=new Movie('Thiruchitrambalam','Sun Pictures','PG');
+const GattaKusthi=new Movie('GattaKusthi','Sun Pictures','PG');
+const Deadpool=new Movie('Deadpool','Marvel','R');
+const Joker=new Movie('Joker','DC','R');
+
+const moviesArray = [CasionRoyaleMovie,Avengers,Varisu,Thunivu,Avatar,Thiruchitrambalam,GattaKusthi,Deadpool,Joker];
+
+console.log(CasionRoyaleMovie.getPG(moviesArray,'PG'));
+console.log(CasionRoyaleMovie.getPG(moviesArray,'R'));
+console.log(CasionRoyaleMovie.getPG(moviesArray,'PG13'));
