@@ -24,3 +24,28 @@ const moviesArray = [CasionRoyaleMovie,Avengers,Varisu,Thunivu,Avatar,Thiruchitr
 console.log(CasionRoyaleMovie.getPG(moviesArray,'PG'));
 console.log(CasionRoyaleMovie.getPG(moviesArray,'R'));
 console.log(CasionRoyaleMovie.getPG(moviesArray,'PG13'));
+------------------------------------------------------------
+------------------------------------------------------------
+class circle{
+    constructor(radius,color){
+        this.radius=radius;
+        this.color=color;
+        this.radius1=2;
+        this.color1="green";
+        }
+        value1(){
+            return this.radius;
+            }
+            
+            value2(){
+                return this.color
+                }
+                
+                SetRadius(r){
+                    return radius1=r ;
+                    }
+                
+                Setcolor(c){
+                    return color1=c;}           
+}
+var CircleRadius=new circle("1.0","red");
