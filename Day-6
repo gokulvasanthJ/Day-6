@@ -1,51 +1,14 @@
-class Movie {
-    constructor(title='', studio='', rating='PG') {
-this.title= title;
-this.studio= studio;
-this.rating= rating;
-    }
-    getPG(movies=[].rating=''){
-        return movies.filter((m)=>m.rating === rating);
-}
-}
 
-const CasionRoyaleMovie=new Movie('Casino Royale','Eon Production','PG13');
-const Avengers=new Movie('Avengers','Marvel','PG13');
-const Varisu=new Movie('Varisu','Seven Screen','PG13');
-const Thunivu=new Movie('Thunivu','Shri Balaji Photos','PG13');
-const Avatar=new Movie('Avatar','eros','PG13');
-const Thiruchitrambalam=new Movie('Thiruchitrambalam','Sun Pictures','PG');
-const GattaKusthi=new Movie('GattaKusthi','Sun Pictures','PG');
-const Deadpool=new Movie('Deadpool','Marvel','R');
-const Joker=new Movie('Joker','DC','R');
+---------------------------------------------
 
-const moviesArray = [CasionRoyaleMovie,Avengers,Varisu,Thunivu,Avatar,Thiruchitrambalam,GattaKusthi,Deadpool,Joker];
-
-console.log(CasionRoyaleMovie.getPG(moviesArray,'PG'));
-console.log(CasionRoyaleMovie.getPG(moviesArray,'R'));
-console.log(CasionRoyaleMovie.getPG(moviesArray,'PG13'));
-------------------------------------------------------------
-------------------------------------------------------------
-class circle{
-    constructor(radius,color){
-        this.radius=radius;
-        this.color=color;
-        this.radius1=2;
-        this.color1="green";
-        }
-        value1(){
-            return this.radius;
-            }
-            
-            value2(){
-                return this.color
-                }
-                
-                SetRadius(r){
-                    return radius1=r ;
-                    }
-                
-                Setcolor(c){
-                    return color1=c;}           
-}
-var CircleRadius=new circle("1.0","red");
+var request = new XMLHttpRequest();
+        request.open('Get','https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json', true);request.send();request.onload = function () {
+             let data = JSON.parse(this.response);
+             let currencies=[];
+             for(i=0; i<data.length; i++){
+                 if(data[i].currencies[0].code=="USD")
+                 {
+                  console.log("name:",data[i].name,"currencie",data[i].currencies[0].code)
+                 }
+             }
+     }
